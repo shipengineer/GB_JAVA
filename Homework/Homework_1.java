@@ -8,12 +8,34 @@ import java.util.Scanner;
 public class Homework_1 {
 
     public static void main(String[] args) {
+        System.out.println(TriangleNumber(recive()));
+    }
 
-        try (Scanner in = new Scanner(System.in)) {
+    public static int recive() {
+        boolean verification = false;
+        String recived_number = "";
+        while (verification == false) {
+
+            Scanner in = new Scanner(System.in);
             System.out.println("Введите номер порядка треугольника: ");
-            // вызов функции по приянтому значению из консоли с последующим выводом
-            System.out.println(TriangleNumber(in.nextInt()));
+            recived_number = in.nextLine();
+            int count = 0;
+            for (Character item : recived_number.toCharArray()) {
+                if (!Character.isDigit(item)) {
+                    verification = false;
+                } else {
+                    count++;
+                }
+            }
+            if (count == recived_number.length()) {
+                verification = true;
+
+            }
+
         }
+
+        return Integer.parseInt(recived_number);
+
     }
 
     // определение функции нахождения треугольного числа
