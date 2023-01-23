@@ -16,7 +16,7 @@ public class Homework_1 {
         }
     }
 
-    // опредеелние функции
+    // определение функции нахождения треугольного числа
     public static int TriangleNumber(int side) {
         return side * (side + 1) / 2;
     }
