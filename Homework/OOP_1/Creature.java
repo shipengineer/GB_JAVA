@@ -1,6 +1,8 @@
 package Homework.OOP_1;
 
-public abstract class Creature {
+import Homework.OOP_1.OOP_1.Attack;
+
+public abstract class Creature implements Attack {
     String name;
     int body;
     int agility;

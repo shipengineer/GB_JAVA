@@ -23,7 +23,7 @@ public class OOP_1 {
     }
 
     interface Attack {
-        void attack();
+        void attack(Creature target);
     }
 
 }

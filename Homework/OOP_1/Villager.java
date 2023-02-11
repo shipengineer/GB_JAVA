@@ -11,6 +11,7 @@ public class Villager extends Creature {
 
     }
 
+    @Override
     public void attack(Creature target) {
 
         target.health_point -= (this.weapon.dmg > 0 ? this.weapon.dmg : 1) * this.body
