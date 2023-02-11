@@ -26,7 +26,7 @@ public abstract class Creature {
     protected String getInfo() {
         return (String.format(
                 "Имя %s, Тело %d, Ловкость %d, Интелект %d, Здоровье %d, Мана %d, Оружие %s %d, Одежда %s %d",
-                this.name, this.body, this.agility, this.intelligence, this.health_point,
+                this.name, this.body, this.agility, this.intelligence, this.health_point, this.mana,
                 this.weapon.name,
                 this.weapon.dmg, this.clothes.name, this.clothes.def));
 

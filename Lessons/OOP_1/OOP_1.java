@@ -17,6 +17,9 @@ public class OOP_1 {
         Xbowman xbowman_1 = new Xbowman("Vernon", 4, 6, 4);
         Monk monk_1 = new Monk("Raas", 5, 5, 5);
         System.out.println(monk_1.getInfo());
+        villager_1.attack(monk_1);
+        System.out.println(monk_1.getInfo());
+
     }
 
     interface Attack {
