@@ -7,8 +7,8 @@ public abstract class Creature implements Attack {
     int body;
     int agility;
     int intelligence;
-    int health_point;
-    int mana;
+    protected int health_point;
+    protected int mana;
     Weapon weapon;
     Cloth clothes;
 
