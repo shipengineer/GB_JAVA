@@ -1,7 +1,12 @@
 package Homework.OOP_2;
 
 public class Spearman extends Creature {
-    // интерфейс нападения подвязываю на основе ловкости
+
+    public Spearman() {
+
+        super("Noname", 4, 5, 0, 1, 3, 10, 4, 0, 0);
+
+    }
 
     public Spearman(String name) {
 
@@ -15,7 +20,7 @@ public class Spearman extends Creature {
     }
 
     public String getInfo() {
-        return "Я копейщик " + name;
+        return "Я копейщик " + getName();
     }
 
 }

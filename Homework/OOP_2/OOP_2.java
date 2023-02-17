@@ -9,12 +9,12 @@ import java.util.Random;
 public class OOP_2 {
     public static void main(String[] args) {
 
-        List<Creature> Team_A = FillTeamA(10);
+        List<Creature> Team_A = FillTeamA(5);
         for (Creature creature : Team_A) {
             System.out.println(creature.getInfo());
 
         }
-        List<Creature> Team_B = FillTeamB(10);
+        List<Creature> Team_B = FillTeamB(5);
         SpeedComparator speedComparator = new SpeedComparator();
 
         List<Creature> merge = new ArrayList<Creature>();
@@ -23,7 +23,6 @@ public class OOP_2 {
         Collections.sort(merge, speedComparator);
         for (Creature creature : merge) {
             System.out.println(creature.getAllInfo());
-
         }
 
     }

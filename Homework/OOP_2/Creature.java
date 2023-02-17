@@ -3,16 +3,16 @@ package Homework.OOP_2;
 import java.util.Comparator;
 
 public abstract class Creature implements Interface {
-    protected String name;
-    protected int attack;
-    protected int defence;
-    protected int shots;
-    protected int minDamage;
-    protected int maxDamage;
-    protected int health;
-    protected int speed;
-    protected int delivery;
-    protected int magick;
+    private String name;
+    private int attack;
+    private int defence;
+    private int shots;
+    private int minDamage;
+    private int maxDamage;
+    private int health;
+    private int speed;
+    private int delivery;
+    private int magick;
 
     public Creature() {
     }
@@ -34,6 +34,42 @@ public abstract class Creature implements Interface {
 
     public int getSpeed() {
         return speed;
+    }
+
+    public int getAttack() {
+        return attack;
+    }
+
+    public int getDefence() {
+        return defence;
+    }
+
+    public int getDelivery() {
+        return delivery;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public int getMagick() {
+        return magick;
+    }
+
+    public int getMaxDamage() {
+        return maxDamage;
+    }
+
+    public int getMinDamage() {
+        return minDamage;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getShots() {
+        return shots;
     }
 
     public String getAllInfo() {

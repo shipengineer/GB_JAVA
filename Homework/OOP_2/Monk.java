@@ -2,6 +2,11 @@ package Homework.OOP_2;
 
 public class Monk extends Creature {
     // интерфейс нападения подвязываю на основе ловкости
+    public Monk() {
+
+        super("Noname", 12, 7, 0, -4, -4, 30, 5, 0, 1);
+
+    }
 
     public Monk(String name) {
 
@@ -15,6 +20,6 @@ public class Monk extends Creature {
     }
 
     public String getInfo() {
-        return "Я монах " + name;
+        return "Я монах " + getName();
     }
 }
