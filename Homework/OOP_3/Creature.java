@@ -11,16 +11,15 @@ public abstract class Creature implements Interface {
     private int shots;
     private int minDamage;
     private int maxDamage;
-    private int health;
+    private final int maxHealth;
     private int speed;
     private int delivery;
     private int magick;
     private Position position;
+    protected PriorityHealerEnum priorityHealerEnum;
+    private int currentHealth;
 
-    public Creature() {
-    }
-
-    public Creature(String name, int attack, int defence, int shots, int minDamage, int maxDamage, int health,
+    public Creature(String name, int attack, int defence, int shots, int minDamage, int maxDamage, int maxHealth,
             int speed, int delivery, int magick, int x, int y) {
         this.name = name;
         this.attack = attack;
@@ -28,11 +27,20 @@ public abstract class Creature implements Interface {
         this.shots = shots;
         this.minDamage = minDamage;
         this.maxDamage = maxDamage;
-        this.health = health;
+        this.maxHealth = maxHealth;
         this.speed = speed;
         this.delivery = delivery;
         this.magick = magick;
         this.position = new Position(x, y);
+        this.currentHealth = maxHealth;
+    }
+
+    public int getCurrentHealth() {
+        return currentHealth;
+    }
+
+    public void setCurrentHealth(int currentHealth) {
+        this.currentHealth = currentHealth;
     }
 
     public int getSpeed() {
@@ -51,8 +59,8 @@ public abstract class Creature implements Interface {
         return delivery;
     }
 
-    public int getHealth() {
-        return health;
+    public int getMaxHealth() {
+        return maxHealth;
     }
 
     public int getMagick() {
@@ -79,10 +87,6 @@ public abstract class Creature implements Interface {
         return position;
     }
 
-    public void setHealth(int health) {
-        this.health = health;
-    }
-
     public void setShots(int shots) {
         this.shots = shots;
     }
@@ -91,12 +95,14 @@ public abstract class Creature implements Interface {
         return (String.format(
                 "Имя %16s, Атака %3d, Защита %3d, Выстрелов %3d, Урон %2d - %2d, Здоровье %3d, Скорость %3d, Передача %3d, магия %3d",
                 this.name, this.attack, this.defence, this.shots, this.minDamage, this.maxDamage,
-                this.health,
+                this.maxHealth,
                 this.speed, this.delivery, this.magick));
 
     }
 
     public void attack(Creature victim) {
-        victim.setHealth(victim.getHealth() - this.getMinDamage() - (int) (Math.random() * this.getMaxDamage()));
+        victim.setCurrentHealth(
+                victim.getCurrentHealth() - this.getMinDamage() - (int) (Math.random() * this.getMaxDamage()));
     }
+
 }

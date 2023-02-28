@@ -6,12 +6,12 @@ public class Sniper extends Creature {
 
     public Sniper() {
         super("Noname", 12, 10, 32, 8, 10, 15, 9, 0, 0, 0, 0);
-
+        this.priorityHealerEnum = PriorityHealerEnum.HIGHT;
     }
 
     public Sniper(String name, int x, int y) {
         super(name, 12, 10, 32, 8, 10, 15, 9, 0, 0, x, y);
-
+        this.priorityHealerEnum = PriorityHealerEnum.HIGHT;
     }
 
     @Override
@@ -19,7 +19,7 @@ public class Sniper extends Creature {
         Creature nearUnit = Team_B.get(0);
         int tempDistance = 128;
 
-        if (getHealth() > 0 || getShots() > 0) {
+        if (getCurrentHealth() > 0 || getShots() > 0) {
             for (Creature unit : Team_B) {
                 if ((Math.pow(
                         Math.pow(unit.getPosition().getX() - this.getPosition().getX(), 2)
