@@ -1,4 +1,4 @@
-package courseErrors;
+package courseErrors.hw1.fExercise;
 
 /**
  * hw1

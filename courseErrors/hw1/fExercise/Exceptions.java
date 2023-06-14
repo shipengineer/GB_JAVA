@@ -1,4 +1,6 @@
-package courseErrors;
+package courseErrors.hw1.fExercise;
+
+
 
 public class Exceptions {
     public void throwNullPointerException() {
